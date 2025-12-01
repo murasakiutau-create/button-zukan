@@ -1,16 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://murasakiutau-create.github.io/button-zukan/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 
-
-<url>
-  <loc>https://murasakiutau-create.github.io/button-zukan/</loc>
-  <lastmod>2025-12-01T04:28:36+00:00</lastmod>
-</url>
-
-
+  <!-- 色別タブ用URL（共有される可能性があるので入れておく） -->
+  <url>
+    <loc>https://murasakiutau-create.github.io/button-zukan/?color=red</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://murasakiutau-create.github.io/button-zukan/?color=blue</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://murasakiutau-create.github.io/button-zukan/?color=yellow</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://murasakiutau-create.github.io/button-zukan/?color=green</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://murasakiutau-create.github.io/button-zukan/?color=purple</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://murasakiutau-create.github.io/button-zukan/?color=pink</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://murasakiutau-create.github.io/button-zukan/?color=brown</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://murasakiutau-create.github.io/button-zukan/?color=black</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://murasakiutau-create.github.io/button-zukan/?color=white</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://murasakiutau-create.github.io/button-zukan/?color=metal</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
