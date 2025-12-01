@@ -13,7 +13,6 @@ body {
     margin: 0;
     padding: 0;
     color: #f8f1ea;
-    /* ←ここをマルーンに変更 */
     background-color: #6a1917;
     /* ほんのり質感だけ残す薄いグラデーション */
     background-image:
@@ -34,9 +33,10 @@ header {
     box-shadow:
         0 1px 0 rgba(255, 255, 255, 0.9) inset,
         0 2px 6px rgba(0, 0, 0, 0.18);
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    /* ← sticky をやめてスクロールする普通のヘッダーに */
+    position: static;
+    top: auto;
+    z-index: auto;
 }
 
 header h1 {
@@ -48,10 +48,38 @@ header h1 {
     color: #4d3524;
 }
 
+/* 英語サブタイトルの色を濃いブラウンにして可読性アップ */
+header h2 {
+    font-size: 14px;
+    margin: 0 0 6px;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    color: #b08a5d;
+}
+
 header p {
     margin: 0;
     font-size: 12px;
     color: #7a6453;
+}
+
+/* header 内の説明文 */
+.intro {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: #6b4a35;
+    line-height: 1.7;
+}
+
+.intro p + p {
+    margin-top: 4px;
+}
+
+.lead {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #927259;
 }
 
 /* -------------------------
@@ -126,6 +154,40 @@ main {
 }
 
 /* -------------------------
+   色別ガイド
+-------------------------- */
+
+.color-guide {
+    margin: 18px 0 20px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: rgba(40, 8, 6, 0.78);
+    border: 1px solid rgba(249, 226, 199, 0.4);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.35);
+    color: #fbe9d5;
+    font-size: 13px;
+}
+
+.color-guide h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+.color-guide h3 {
+    margin: 14px 0 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffe6b5;
+}
+
+.color-guide p {
+    margin: 0 0 4px;
+}
+
+/* -------------------------
    ギャラリー・カード
 -------------------------- */
 
@@ -183,6 +245,7 @@ main {
     background: #fdf7ec;
 }
 
+/* 画像枠 */
 .card-image {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -191,13 +254,14 @@ main {
     overflow: hidden;
 }
 
-/* ここを新しく追加 */
+/* 実際の画像 */
 .card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
+
 .card-image::after {
     content: "";
     position: absolute;
@@ -251,34 +315,6 @@ main {
     margin-left: auto;
     margin-right: auto;
 }
-
-/* -------------------------
-   メディアクエリ（スマホ）
--------------------------- */
-
-@media (max-width: 480px) {
-    header {
-        padding: 12px 12px 10px;
-    }
-    
-    header h1 {
-        font-size: 18px;
-    }
-    
-    main {
-        padding: 12px;
-    }
-    
-    .gallery {
-        gap: 10px;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    }
-    
-    .card {
-        border-radius: 12px;
-    }
-}
-
 
 /* -------------------------
    ページネーション（番号付き）
@@ -359,59 +395,55 @@ main {
   background: linear-gradient(145deg, #fff7ec, #e8d5bd);
   transform: translateY(1px);
 }
-/* ページネーション全体の箱 */
-.pagination {
-  margin: 22px 0;
-  display: flex;
-  justify-content: center;  /* 中央寄せ */
-  align-items: center;
-  gap: 10px;
-}
 
-/* header 内の説明文 */
-.intro {
-    margin-top: 6px;
-    margin-bottom: 6px;
-    font-size: 13px;
-    color: #6b4a35;
-    line-height: 1.7;
-}
+/* -------------------------
+   メディアクエリ（スマホ）
+-------------------------- */
 
-.intro p + p {
-    margin-top: 4px;
-}
+@media (max-width: 480px) {
+    header {
+        padding: 12px 12px 10px;
+    }
+    
+    header h1 {
+        font-size: 18px;
+    }
 
-.lead {
-    margin-top: 4px;
-    font-size: 12px;
-    color: #927259;
-}
-.color-guide {
-    margin: 18px 0 20px;
-    padding: 14px 16px;
-    border-radius: 14px;
-    background: rgba(40, 8, 6, 0.78);
-    border: 1px solid rgba(249, 226, 199, 0.4);
-    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.35);
-    color: #fbe9d5;
-    font-size: 13px;
-}
+    header h2 {
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+    
+    main {
+        padding: 12px;
+    }
+    
+    .gallery {
+        gap: 10px;
+        /* スマホでは少し小さめのカードが並ぶように調整 */
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
 
-.color-guide h2 {
-    margin-top: 0;
-    margin-bottom: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-}
+    /* 画像が大きく見えすぎないよう、やや縦長にして圧迫感を軽減 */
+    .card-image {
+        aspect-ratio: 4 / 5;
+    }
+    
+    .card {
+        border-radius: 12px;
+    }
 
-.color-guide h3 {
-    margin: 14px 0 4px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #ffe6b5;
-}
+    .color-guide {
+        margin: 14px 0 16px;
+        padding: 12px 12px;
+        font-size: 12px;
+    }
 
-.color-guide p {
-    margin: 0 0 4px;
+    .color-guide h2 {
+        font-size: 14px;
+    }
+
+    .color-guide h3 {
+        font-size: 12px;
+    }
 }
