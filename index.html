@@ -815,6 +815,17 @@
   let currentFilter = "all";
   let currentPage = 1;
 
+  // ページ切り替え時に上部へスクロール
+  function scrollToTop() {
+    // ページ全体の一番上へ
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+    // もし「ギャラリーの上あたり」にしたければ↓に差し替えてもOK
+    // document.querySelector("header")?.scrollIntoView({ behavior: "smooth" });
+  }
+
   function getFilteredCards() {
     return cards.filter(card => {
       const color = card.getAttribute("data-color");
@@ -837,6 +848,7 @@
       btn.addEventListener("click", () => {
         currentPage = i;
         renderCards();
+        scrollToTop();   // ← ページ番号クリック時に上へ
       });
 
       pageNumbers.appendChild(btn);
@@ -883,17 +895,20 @@
       currentPage = 1;
 
       renderCards();
+      scrollToTop();   // ← タブ切り替え時も上へ戻る
     });
   });
 
   prevPageBtn.addEventListener("click", () => {
     currentPage--;
     renderCards();
+    scrollToTop();     // ← 「＜」押したとき
   });
 
   nextPageBtn.addEventListener("click", () => {
     currentPage++;
     renderCards();
+    scrollToTop();     // ← 「＞」押したとき
   });
 
   document.addEventListener("DOMContentLoaded", renderCards);
