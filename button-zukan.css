@@ -157,6 +157,7 @@ main {
    色別ガイド
 -------------------------- */
 
+/* 色別ガイドの外枠（既存） */
 .color-guide {
     margin: 18px 0 20px;
     padding: 14px 16px;
@@ -168,6 +169,44 @@ main {
     font-size: 13px;
 }
 
+/* details 全体 */
+.color-details {
+    border: none;
+    padding: 0;
+}
+
+/* summary（見出し部分） */
+.color-details > summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    font-size: 14px;
+    margin: 0;
+    padding: 6px 4px 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* summary の ▶マークを自作する感じ */
+.color-details > summary::before {
+    content: "▶";
+    font-size: 10px;
+    transform: translateY(1px);
+}
+
+/* 開いている時は ▼ に */
+.color-details[open] > summary::before {
+    content: "▼";
+}
+
+/* 中身（h2 / h3 / p 群）は少し内側に寄せる */
+.color-guide-inner {
+    margin-top: 6px;
+}
+
+/* 既存の h2 / h3 スタイルはそのままでOK */
 .color-guide h2 {
     margin-top: 0;
     margin-bottom: 8px;
@@ -181,10 +220,6 @@ main {
     font-size: 13px;
     font-weight: 600;
     color: #ffe6b5;
-}
-
-.color-guide p {
-    margin: 0 0 4px;
 }
 
 /* -------------------------
