@@ -1,16 +1,56 @@
-<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
- <title>ボタン図鑑｜アンティークボタン・ガラスボタンの写真コレクション</title>
+  <title>ボタン図鑑｜アンティークボタン・ガラスボタンの写真コレクション</title>
+
+  <!-- SEO 基本 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ボタン図鑑は、アンティークボタン・ガラスボタン・ヴィンテージボタンを写真付きで眺められるコレクションサイトです。色別にボタンを見比べられる美しい図鑑形式で、ハンドメイド素材探しやデザインの参考にも最適です。">
   <meta name="google-site-verification" content="Uziv3xgld5IRdkA45iJSoyalNtfqkXnBtIRY5zHRT-I" />
-<link rel="stylesheet" href="button-zukan.css">
+
+  <!-- OGP -->
+  <meta property="og:title" content="ボタン図鑑｜Button Collection">
+  <meta property="og:description" content="アンティークボタン・ガラスボタンなど美しいボタンを色別に見られるオンライン図鑑。ハンドメイドの参考にも。">
+  <meta property="og:image" content="https://murasakiutau-create.github.io/button-zukan/ogp.png">
+  <meta property="og:url" content="https://murasakiutau-create.github.io/button-zukan/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ボタン図鑑">
+
+  <!-- （あれば）Twitterカード用 -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ボタン図鑑｜Button Collection">
+  <meta name="twitter:description" content="アンティークボタン・ガラスボタンなど美しいボタンを色別に見られるオンライン図鑑。ハンドメイドの参考にも。">
+  <meta name="twitter:image" content="https://murasakiutau-create.github.io/button-zukan/ogp.png">
+
+  <!-- ファビコン -->
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="button-zukan.css">
 </head>
 <body>
   <header>
-    <h1>ボタン図鑑</h1>
-    <p>タブで色を切り替えて、コレクションを眺めるだけのシンプル図鑑。</p>
+    <!-- h1 / h2 最強化 -->
+    <h1>ボタン図鑑｜アンティーク・ガラス・ヴィンテージの美しいボタン紹介</h1>
+    <h2>Button Collection - Antique, Vintage & Glass Buttons</h2>
+
+    <!-- SEOブースト用 解説文 -->
+    <div class="intro">
+      <p>
+        ボタン図鑑は、アンティークボタン・ヴィンテージボタン・ガラスボタンを中心に、
+        美しいボタンを写真付きで一覧できるオンラインコレクションです。
+        色別のタブから直感的に選べるため、ハンドメイド作品のデザイン参考、
+        素材研究、世界のボタン文化の鑑賞にも最適です。
+      </p>
+      <p>
+        レトロ・クラシカル・宝石風・金属装飾など、多様なスタイルのボタンを掲載。
+        今後も新しいボタンを追加していき、世界にひとつの“美しいボタンの図鑑”を
+        目指しています。
+      </p>
+    </div>
+
+    <!-- 元のキャッチコピー（そのまま残してOK） -->
+    <p class="lead">タブで色を切り替えて、コレクションを眺めるだけのシンプル図鑑。</p>
+
     <div class="tabs">
       <button class="tab-button active" data-filter="all">すべて</button>
       <button class="tab-button" data-filter="red">赤</button>
@@ -23,7 +63,6 @@
       <button class="tab-button" data-filter="black">黒</button>
       <button class="tab-button" data-filter="white">白</button>
       <button class="tab-button" data-filter="metal">金属</button>
-      
     </div>
   </header>
 
