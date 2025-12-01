@@ -788,11 +788,11 @@
 
       <!-- ▲▲ ここまでをコピペして増やす ▲▲ -->
     </div>
-     <div class="pagination" id="pagination" style="display:none;">
-      <button class="page-button" id="prevPage" type="button">&lt;</button>
-      <span class="page-info" id="pageInfo">1 / 1</span>
-      <button class="page-button" id="nextPage" type="button">&gt;</button>
-    </div>
+   <div class="pagination" id="pagination" style="display:none;">
+  <button class="page-button" id="prevPage" type="button">&lt;</button>
+  <div class="page-numbers" id="pageNumbers"></div>
+  <button class="page-button" id="nextPage" type="button">&gt;</button>
+</div>
     <!-- ▲ ここまで追加 ▲ -->
 
     <div class="empty-message" id="emptyMessage" style="display:none;">
@@ -800,98 +800,105 @@
     </div>
   </main>
   
-  
+  <script>
+  const tabs = document.querySelectorAll(".tab-button");
+  const cards = Array.from(document.querySelectorAll(".card"));
+  const emptyMessage = document.getElementById("emptyMessage");
 
- <script>
-    const tabs = document.querySelectorAll(".tab-button");
-    const cards = Array.from(document.querySelectorAll(".card"));
-    const emptyMessage = document.getElementById("emptyMessage");
+  const pagination = document.getElementById("pagination");
+  const prevPageBtn = document.getElementById("prevPage");
+  const nextPageBtn = document.getElementById("nextPage");
+  const pageNumbers = document.getElementById("pageNumbers");
 
-    const pagination = document.getElementById("pagination");
-    const prevPageBtn = document.getElementById("prevPage");
-    const nextPageBtn = document.getElementById("nextPage");
-    const pageInfo = document.getElementById("pageInfo");
+  const PAGE_SIZE = 30;
 
-    const PAGE_SIZE = 30; // 1ページに表示するカード数（変えたければここ）
+  let currentFilter = "all";
+  let currentPage = 1;
 
-    let currentFilter = "all";
-    let currentPage = 1;
+  function getFilteredCards() {
+    return cards.filter(card => {
+      const color = card.getAttribute("data-color");
+      return currentFilter === "all" || color === currentFilter;
+    });
+  }
 
-    // 今のフィルタ（色タブ）に該当するカード一覧を返す
-    function getFilteredCards() {
-      return cards.filter(card => {
-        const color = card.getAttribute("data-color");
-        return currentFilter === "all" || color === currentFilter;
-      });
-    }
+  function renderPageNumbers(totalPages) {
+    pageNumbers.innerHTML = "";
 
-    // フィルタ＆ページに応じて表示を更新
-    function renderCards() {
-      const filtered = getFilteredCards();
-      const totalCards = filtered.length;
-      const totalPages = Math.max(1, Math.ceil(totalCards / PAGE_SIZE));
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement("div");
+      btn.className = "page-number";
+      btn.textContent = i;
 
-      // ページ番号が範囲外なら補正
-      if (currentPage > totalPages) currentPage = totalPages;
-      if (currentPage < 1) currentPage = 1;
-
-      // いったん全部隠す
-      cards.forEach(card => {
-        card.style.display = "none";
-      });
-
-      // 対象カードがない場合
-      if (totalCards === 0) {
-        emptyMessage.style.display = "block";
-        pagination.style.display = "none";
-        pageInfo.textContent = "";
-        return;
+      if (i === currentPage) {
+        btn.classList.add("active");
       }
 
-      emptyMessage.style.display = "none";
-
-      // 表示する範囲を計算
-      const startIndex = (currentPage - 1) * PAGE_SIZE;
-      const endIndex = startIndex + PAGE_SIZE;
-      const visibleCards = filtered.slice(startIndex, endIndex);
-
-      visibleCards.forEach(card => {
-        card.style.display = "flex";
-      });
-
-      // ページネーション更新
-      pageInfo.textContent = `${currentPage} / ${totalPages}`;
-      prevPageBtn.disabled = currentPage === 1;
-      nextPageBtn.disabled = currentPage === totalPages;
-      pagination.style.display = totalPages > 1 ? "flex" : "none";
-    }
-
-    // タブクリック
-    tabs.forEach(tab => {
-      tab.addEventListener("click", () => {
-        tabs.forEach(t => t.classList.remove("active"));
-        tab.classList.add("active");
-
-        currentFilter = tab.getAttribute("data-filter") || "all";
-        currentPage = 1; // フィルタ切り替え時は1ページ目に戻す
-
+      btn.addEventListener("click", () => {
+        currentPage = i;
         renderCards();
       });
-    });
 
-    // ページ送りボタン
-    prevPageBtn.addEventListener("click", () => {
-      currentPage--;
+      pageNumbers.appendChild(btn);
+    }
+  }
+
+  function renderCards() {
+    const filtered = getFilteredCards();
+    const totalCards = filtered.length;
+    const totalPages = Math.max(1, Math.ceil(totalCards / PAGE_SIZE));
+
+    if (currentPage > totalPages) currentPage = totalPages;
+    if (currentPage < 1) currentPage = 1;
+
+    cards.forEach(card => (card.style.display = "none"));
+
+    if (totalCards === 0) {
+      emptyMessage.style.display = "block";
+      pagination.style.display = "none";
+      return;
+    }
+
+    emptyMessage.style.display = "none";
+
+    const startIndex = (currentPage - 1) * PAGE_SIZE;
+    const endIndex = startIndex + PAGE_SIZE;
+    const visibleCards = filtered.slice(startIndex, endIndex);
+
+    visibleCards.forEach(card => (card.style.display = "flex"));
+
+    prevPageBtn.disabled = currentPage === 1;
+    nextPageBtn.disabled = currentPage === totalPages;
+
+    renderPageNumbers(totalPages);
+    pagination.style.display = totalPages > 1 ? "flex" : "none";
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      currentFilter = tab.getAttribute("data-filter") || "all";
+      currentPage = 1;
+
       renderCards();
     });
+  });
 
-    nextPageBtn.addEventListener("click", () => {
-      currentPage++;
-      renderCards();
-    });
+  prevPageBtn.addEventListener("click", () => {
+    currentPage--;
+    renderCards();
+  });
 
-    // 初期表示
-    document.addEventListener("DOMContentLoaded", renderCards);
-  </script>
+  nextPageBtn.addEventListener("click", () => {
+    currentPage++;
+    renderCards();
+  });
+
+  document.addEventListener("DOMContentLoaded", renderCards);
+</script>
+
+
 </body>
 </html>
