@@ -815,17 +815,20 @@
   let currentFilter = "all";
   let currentPage = 1;
 
-  // ページ切り替え時に上部へスクロール
-  function scrollToTop() {
-    // ページ全体の一番上へ
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-    // もし「ギャラリーの上あたり」にしたければ↓に差し替えてもOK
-    // document.querySelector("header")?.scrollIntoView({ behavior: "smooth" });
-  }
+ function scrollToTop() {
+  const header = document.querySelector("header");
 
+  // まず header までスクロール（対応しているブラウザ）
+  if (header && typeof header.scrollIntoView === "function") {
+    header.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  } else {
+    // 古いブラウザ向けの保険
+    window.scrollTo(0, 0);
+  }
+}
   function getFilteredCards() {
     return cards.filter(card => {
       const color = card.getAttribute("data-color");
