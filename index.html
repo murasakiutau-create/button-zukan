@@ -28,436 +28,602 @@
   <link rel="icon" href="favicon.png" type="image/png">
 
   <!-- 構造化データ（JSON-LD） -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "name": "ボタン図鑑",
-        "url": "https://murasakiutau-create.github.io/button-zukan/",
-        "inLanguage": "ja",
-        "description": "アンティークボタン・ヴィンテージボタンを色別に眺められるオンライン図鑑サイト。"
+  ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://murasakiutau-create.github.io/button-zukan/#website",
+      "name": "ボタン図鑑",
+      "url": "https://murasakiutau-create.github.io/button-zukan/",
+      "inLanguage": "ja",
+      "description": "アンティークボタン・ヴィンテージボタンを色別に眺められるオンライン図鑑サイト。",
+      "publisher": {
+        "@type": "Person",
+        "name": "紫宮リサ"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://murasakiutau-create.github.io/button-zukan/#webpage",
+      "url": "https://murasakiutau-create.github.io/button-zukan/",
+      "name": "ボタン図鑑｜アンティーク・ヴィンテージの美しいボタン紹介",
+      "isPartOf": {
+        "@id": "https://murasakiutau-create.github.io/button-zukan/#website"
       },
-      {
-        "@type": "ItemList",
-        "name": "ボタン図鑑 コレクション一覧",
-        "itemListElement": [
-          {
+      "inLanguage": "ja",
+      "description": "アンティークボタン・ガラスボタン・ヴィンテージボタンを写真付きで色別に眺められるオンライン図鑑。ハンドメイド作品やデザインの参考にも。",
+      "primaryImageOfPage": {
+        "@id": "https://murasakiutau-create.github.io/button-zukan/ogp.png"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://murasakiutau-create.github.io/button-zukan/ogp.png",
+      "url": "https://murasakiutau-create.github.io/button-zukan/ogp.png",
+      "width": 1200,
+      "height": 630,
+      "caption": "ボタン図鑑 トップイメージ"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://murasakiutau-create.github.io/button-zukan/#collection",
+      "name": "ボタン図鑑 コレクション一覧",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
             "@type": "ImageObject",
-            "position": 1,
             "name": "薔薇窓の宝石",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/薔薇窓.webp"
-          },
-          {
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
             "@type": "ImageObject",
-            "position": 2,
             "name": "蒼滴ドロップ",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/蒼滴ドロップ.webp"
-          },
-          {
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
             "@type": "ImageObject",
-            "position": 3,
-            "name": "王冠卵",
-            "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/王冠卵.webp"
-          },
-          {
+            "name": "紅焰オーブ",
+            "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/紅焰オーブ.webp"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
             "@type": "ImageObject",
-            "position": 4,
-            "name": "闇琥珀リング",
-            "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/闇琥珀リング.webp"
-          },
+            "name": "古王の唐草紋",
+            "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/古王の唐草紋.webp"
+          }
+        },
           {
+           "@type": "ListItem",
+          "position": 5,
+          "item": {
             "@type": "ImageObject",
-            "position": 5,
             "name": "古代金紋ドーム",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/古代金紋ドーム.webp"
           },
           {
-            "@type": "ImageObject",
-            "position": 6,
+           "@type": "ListItem",
+          "position": 6,
+          "item": {
+          "@type": "ImageObject",
             "name": "桃花珠",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/桃花珠.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 7,
+            "@type": "ListItem",
+          "position": 7,
+          "item": {
+          "@type": "ImageObject",
             "name": "翠葉ミント",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/翠葉ミント.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 8,
+            "@type": "ListItem",
+          "position": 8,
+          "item": {
+          "@type": "ImageObject",
             "name": "白金フルール",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/白金フルール.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 9,
+             "@type": "ListItem",
+          "position": 9,
+          "item": {
+          "@type": "ImageObject",
             "name": "藍紋レース",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/藍紋レース.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 10,
+             "@type": "ListItem",
+          "position": 10,
+          "item": {
+          "@type": "ImageObject",
             "name": "金蜜オーブ",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/金蜜オーブ.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 11,
+            "@type": "ListItem",
+          "position": 11,
+          "item": {
+          "@type": "ImageObject",
             "name": "赤瑪瑙ツインライン",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/赤瑪瑙ツインライン.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 12,
+             "@type": "ListItem",
+          "position": 12,
+          "item": {
+          "@type": "ImageObject",
             "name": "黄金鱗スケール",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/黄金鱗スケール.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 13,
+             "@type": "ListItem",
+          "position": 13,
+          "item": {
+          "@type": "ImageObject",
             "name": "紫幻サークル",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/紫幻サークル.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 14,
+             "@type": "ListItem",
+          "position": 14,
+          "item": {
+          "@type": "ImageObject",
             "name": "大地貝モザイク",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/大地貝モザイク.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 15,
+             "@type": "ListItem",
+          "position": 15,
+          "item": {
+          "@type": "ImageObject",
             "name": "海泡花グラス",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/海泡花グラス.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 16,
+             "@type": "ListItem",
+          "position": 16,
+          "item": {
+          "@type": "ImageObject",
             "name": "金翼フェザー",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/金翼フェザー.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 17,
+             "@type": "ListItem",
+          "position": 17,
+          "item": {
+          "@type": "ImageObject",
             "name": "潮騒マーメイドシェル",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/潮騒マーメイドシェル.webp"
           },
 
       {
-            "@type": "ImageObject",
-            "position": 18,
+             "@type": "ListItem",
+          "position": 18,
+          "item": {
+          "@type": "ImageObject",
             "name": "星環リング",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/星環リング.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 19,
+             "@type": "ListItem",
+          "position": 19,
+          "item": {
+          "@type": "ImageObject",
             "name": "紅焰オーブ",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/紅焰オーブ.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 20,
+             "@type": "ListItem",
+          "position": 20,
+          "item": {
+          "@type": "ImageObject",
             "name": "真珠冠ミルキー",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/真珠冠ミルキー.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 21,
+             "@type": "ListItem",
+          "position": 21,
+          "item": {
+          "@type": "ImageObject",
             "name": "金花珊瑚ペタル",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/金花珊瑚ペタル.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 22,
+            "@type": "ListItem",
+          "position": 22,
+          "item": {
+          "@type": "ImageObject",
             "name": "淡桃ヌード",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/淡桃ヌード.webp"
           },
 
       {
-            "@type": "ImageObject",
-            "position": 23,
+             "@type": "ListItem",
+          "position": 23,
+          "item": {
+          "@type": "ImageObject",
             "name": "夜樹サークル",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/夜樹サークル.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 24,
+             "@type": "ListItem",
+          "position": 24,
+          "item": {
+          "@type": "ImageObject",
             "name": "虹花の宝輪",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/虹花の宝輪.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 25,
+            "@type": "ListItem",
+          "position": 25,
+          "item": {
+          "@type": "ImageObject",
             "name": "蒼幻星スフィア",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/蒼幻星スフィア.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 26,
+             "@type": "ListItem",
+          "position": 26,
+          "item": {
+          "@type": "ImageObject",
             "name": "若葉スワール",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/若葉スワール.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 27,
+             "@type": "ListItem",
+          "position": 27,
+          "item": {
+          "@type": "ImageObject",
             "name": "六芒宝印",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/六芒宝印.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 28,
+           "@type": "ListItem",
+          "position": 28,
+          "item": {
+          "@type": "ImageObject",
             "name": "四宝円",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/四宝円.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 29,
+            "@type": "ListItem",
+          "position": 29,
+          "item": {
+          "@type": "ImageObject",
             "name": "古王の唐草紋",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/古王の唐草紋.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 30,
+             "@type": "ListItem",
+          "position": 30,
+          "item": {
+          "@type": "ImageObject",
             "name": "蜜花ブーケ",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/蜜花ブーケ.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 31,
+             "@type": "ListItem",
+          "position": 31,
+          "item": {
+          "@type": "ImageObject",
             "name": "紅珠サークレット",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/紅珠サークレット.webp"
           },
 
       {
-            "@type": "ImageObject",
-            "position": 32,
+             "@type": "ListItem",
+          "position": 32,
+          "item": {
+          "@type": "ImageObject",
             "name": "陽輪琥珀",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/陽輪琥珀.webp"
           },
 
       {
-            "@type": "ImageObject",
-            "position": 33,
+             "@type": "ListItem",
+          "position": 33,
+          "item": {
+          "@type": "ImageObject",
             "name": "風華スパイラル",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/風華スパイラル.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 34,
+            "@type": "ListItem",
+          "position": 34,
+          "item": {
+          "@type": "ImageObject",
             "name": "翠玉ミラージュ",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/翠玉ミラージュ.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 35,
+             "@type": "ListItem",
+          "position": 35,
+          "item": {
+          "@type": "ImageObject",
             "name": "夜海の宝星",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/夜海の宝星.webp"
           },
 
       {
-            "@type": "ImageObject",
-            "position": 36,
+             "@type": "ListItem",
+          "position": 36,
+          "item": {
+          "@type": "ImageObject",
             "name": "赤月桂エンブレム",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/赤月桂エンブレム.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 37,
+             "@type": "ListItem",
+          "position": 37,
+          "item": {
+          "@type": "ImageObject",
             "name": "純白クロス",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/純白クロス.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 38,
+            "@type": "ListItem",
+          "position": 38,
+          "item": {
+          "@type": "ImageObject",
             "name": "夜会の黒真珠",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/夜会の黒真珠.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 39,
+             "@type": "ListItem",
+          "position": 39,
+          "item": {
+          "@type": "ImageObject",
             "name": "宝金花レガリア",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/宝金花レガリア.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 40,
+             "@type": "ListItem",
+          "position": 40,
+          "item": {
+          "@type": "ImageObject",
             "name": "金結の古縁",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/金結の古縁.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 41,
+             "@type": "ListItem",
+          "position": 41,
+          "item": {
+          "@type": "ImageObject",
             "name": "夢桜リム",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/夢桜リム.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 42,
+             "@type": "ListItem",
+          "position": 42,
+          "item": {
+          "@type": "ImageObject",
             "name": "黄金織ドーム",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/黄金織ドーム.webp"
           },
 
       {
-            "@type": "ImageObject",
-            "position": 43,
+             "@type": "ListItem",
+          "position": 43,
+          "item": {
+          "@type": "ImageObject",
             "name": "森影オーブ",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/森影オーブ.webp"
           },
 
       {
-            "@type": "ImageObject",
-            "position": 44,
+            "@type": "ListItem",
+          "position": 44,
+          "item": {
+          "@type": "ImageObject",
             "name": "黄金雫エレガンス",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/黄金雫エレガンス.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 45,
+             "@type": "ListItem",
+          "position": 45,
+          "item": {
+          "@type": "ImageObject",
             "name": "宵闇ノクターン",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/宵闇ノクターン.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 46,
+             "@type": "ListItem",
+          "position": 46,
+          "item": {
+          "@type": "ImageObject",
             "name": "黒鋳ノワール",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/黒鋳ノワール.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 47,
+            "@type": "ListItem",
+          "position": 47,
+          "item": {
+          "@type": "ImageObject",
             "name": "陽翼シグネット",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/陽翼シグネット.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 48,
+            "@type": "ListItem",
+          "position": 48,
+          "item": {
+          "@type": "ImageObject",
             "name": "桜渦モチーフ",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/桜渦モチーフ.webp"
           },
 
       {
-            "@type": "ImageObject",
-            "position": 49,
+            "@type": "ListItem",
+          "position": 49,
+          "item": {
+          "@type": "ImageObject",
             "name": "紅梅ペタル",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/紅梅ペタル.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 50,
+             "@type": "ListItem",
+          "position": 50,
+          "item": {
+          "@type": "ImageObject",
             "name": "紺夜レリクス",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/紺夜レリクス.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 51,
+             "@type": "ListItem",
+          "position": 51,
+          "item": {
+          "@type": "ImageObject",
             "name": "翠輪ジュエル",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/翠輪ジュエル.webp"
           },
 
       {
-            "@type": "ImageObject",
-            "position": 52,
+            "@type": "ListItem",
+          "position": 52,
+          "item": {
+          "@type": "ImageObject",
             "name": "羅針クロス",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/羅針クロス.webp"
           },
 
       {
-            "@type": "ImageObject",
-            "position": 53,
+            "@type": "ListItem",
+          "position": 53,
+          "item": {
+          "@type": "ImageObject",
             "name": "金渦の銀河",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/金渦の銀河.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 54,
+             "@type": "ListItem",
+          "position": 54,
+          "item": {
+          "@type": "ImageObject",
             "name": "王冠クラシカル",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/王冠クラシカル.webp"
           },
 
       {
-            "@type": "ImageObject",
-            "position": 55,
+           "@type": "ListItem",
+          "position": 55,
+          "item": {
+          "@type": "ImageObject",
             "name": "紫陽ピオニー",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/紫陽ピオニー.webp"
           },
 
       {
-            "@type": "ImageObject",
-            "position": 56,
+            "@type": "ListItem",
+          "position": 56,
+          "item": {
+          "@type": "ImageObject",
             "name": "黄月のレース",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/黄月のレース.webp"
           },
 
       {
-            "@type": "ImageObject",
-            "position": 57,
+            "@type": "ListItem",
+          "position": 57,
+          "item": {
+          "@type": "ImageObject",
             "name": "紺花風ブルーム",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/紺花風ブルーム.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 58,
+            "@type": "ListItem",
+          "position": 58,
+          "item": {
+          "@type": "ImageObject",
             "name": "金花描ブロッサム",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/金花描ブロッサム.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 59,
+            "@type": "ListItem",
+          "position": 59,
+          "item": {
+          "@type": "ImageObject",
             "name": "森渡ミスト",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/森渡ミスト.webp"
           },
 
       {
-            "@type": "ImageObject",
-            "position": 60,
+            "@type": "ListItem",
+          "position": 60,
+          "item": {
+          "@type": "ImageObject",
             "name": "金唐花細工",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/金唐花細工.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 61,
+            "@type": "ListItem",
+          "position": 61,
+          "item": {
+          "@type": "ImageObject",
             "name": "雪銀花環",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/雪銀花環.webp"
           },
 
       {
-            "@type": "ImageObject",
-            "position": 62,
+             "@type": "ListItem",
+          "position": 62,
+          "item": {
+          "@type": "ImageObject",
             "name": "花紡リリィ",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/花紡リリィ.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 63,
+             "@type": "ListItem",
+          "position": 63,
+          "item": {
+          "@type": "ImageObject",
             "name": "宙咲ギャラクシー",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/宙咲ギャラクシー.webp"
           },
 
       {
-            "@type": "ImageObject",
-            "position": 64,
+             "@type": "ListItem",
+          "position": 64,
+          "item": {
+          "@type": "ImageObject",
             "name": "琥珀月冠",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/琥珀月冠.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 65,
+            "@type": "ListItem",
+          "position": 65,
+          "item": {
+          "@type": "ImageObject",
             "name": "朽葉ノット",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/朽葉ノット.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 66,
+           "@type": "ListItem",
+          "position": 66,
+          "item": {
+          "@type": "ImageObject",
             "name": "桃金旋ロープ",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/桃金旋ロープ.webp"
           },
       {
-            "@type": "ImageObject",
-            "position": 67,
+             "@type": "ListItem",
+          "position": 67,
+          "item": {
+          "@type": "ImageObject",
             "name": "焦糖グリッド",
             "contentUrl": "https://murasakiutau-create.github.io/button-zukan/images/焦糖グリッド.webp"
           },
@@ -1836,7 +2002,33 @@
       この色のボタンは、まだ登録されていません。
     </div>
   </main>
-  
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-title">ボタン図鑑 内ナビゲーション</p>
+    <ul class="footer-links">
+      <li><a href="#gallery">▶ ボタン一覧を見る</a></li>
+      <li><a href="#color-guide">色別・ボタンの特徴（全体）</a></li>
+      <li><a href="#guide-red">赤いボタンの特徴</a></li>
+      <li><a href="#guide-blue">青いボタンの特徴</a></li>
+      <li><a href="#guide-yellow">黄色・琥珀色のボタン</a></li>
+      <li><a href="#guide-green">緑・森モチーフのボタン</a></li>
+      <li><a href="#guide-purple">紫・高貴なボタン</a></li>
+      <li><a href="#guide-brown">茶色・レトロボタン</a></li>
+      <li><a href="#guide-white">白・パール調のボタン</a></li>
+      <li><a href="#guide-black">黒・クラシカルボタン</a></li>
+      <li><a href="#guide-metal">金属ボタン・紋章ボタン</a></li>
+    </ul>
+
+    <p class="footer-note">
+      「ボタン図鑑」は、アンティークボタン・ヴィンテージボタンを
+      色別に眺められる個人運営のオンラインコレクションサイトです。
+    </p>
+
+    <p class="footer-copy">
+      © 2025 ボタン図鑑 / Murasaki Utau
+    </p>
+  </div>
+</footer>
  <script>
   const tabs = document.querySelectorAll(".tab-button");
   const cards = Array.from(document.querySelectorAll(".card"));
