@@ -1,0 +1,274 @@
+/* -------------------------
+   ベース（全体の雰囲気）
+-------------------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f8f1ea;
+    /* ←ここをマルーンに変更 */
+    background-color: #6a1917;
+    /* ほんのり質感だけ残す薄いグラデーション */
+    background-image:
+        radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.06), transparent 55%),
+        radial-gradient(circle at 100% 0, rgba(255, 255, 255, 0.04), transparent 60%);
+    line-height: 1.6;
+}
+
+/* -------------------------
+   ヘッダー
+-------------------------- */
+
+header {
+    padding: 18px 24px 14px;
+    background: rgba(250, 246, 237, 0.96);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(145, 115, 83, 0.25);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.9) inset,
+        0 2px 6px rgba(0, 0, 0, 0.18);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 22px;
+    margin: 0 0 4px;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", "Times New Roman", serif;
+    color: #4d3524;
+}
+
+header p {
+    margin: 0;
+    font-size: 12px;
+    color: #7a6453;
+}
+
+/* -------------------------
+   タブ
+-------------------------- */
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tab-button {
+    border-radius: 999px;
+    border: 1px solid rgba(125, 96, 71, 0.35);
+    background: linear-gradient(145deg, #f6efe4, #e6d6c0);
+    padding: 6px 11px;
+    font-size: 11px;
+    cursor: pointer;
+    color: #5a4331;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.8),
+        0 2px 3px rgba(0, 0, 0, 0.08);
+    transition:
+        background 0.15s ease,
+        transform 0.12s ease,
+        box-shadow 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.tab-button::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(125, 96, 71, 0.45);
+}
+
+.tab-button:hover {
+    background: linear-gradient(145deg, #fdf7ee, #e9dac7);
+    transform: translateY(1px);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.9),
+        0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.tab-button.active {
+    background: linear-gradient(145deg, #7f5b3e, #654029);
+    color: #fdf7ee;
+    border-color: rgba(56, 36, 21, 0.7);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.35),
+        0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.tab-button.active::before {
+    background: #f8e2a3;
+}
+
+/* -------------------------
+   メインレイアウト
+-------------------------- */
+
+main {
+    padding: 18px;
+    max-width: 1040px;
+    margin: 0 auto 24px;
+}
+
+/* -------------------------
+   ギャラリー・カード
+-------------------------- */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 14px;
+}
+
+.card {
+    background: #fbf4e7;
+    border-radius: 14px;
+    border: 1px solid rgba(166, 133, 95, 0.35);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.9) inset,
+        0 10px 18px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    position: relative;
+    isolation: isolate;
+    transition:
+        transform 0.16s ease,
+        box-shadow 0.16s ease,
+        border-color 0.16s ease,
+        background 0.16s ease;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 30% 0, rgba(255, 255, 255, 0.35), transparent 55%);
+    mix-blend-mode: soft-light;
+    opacity: 0.6;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 2px 0 rgba(255, 255, 255, 0.9) inset,
+        0 14px 22px rgba(0, 0, 0, 0.25);
+    border-color: rgba(145, 108, 70, 0.7);
+    background: #fdf7ec;
+}
+
+.card-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    background-color: #d7c5a8;
+    position: relative;
+}
+
+.card-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.4),
+        inset 0 0 0 2px rgba(111, 80, 50, 0.25);
+    mix-blend-mode: soft-light;
+}
+
+.card-body {
+    padding: 9px 11px 11px;
+}
+
+.card-name {
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: #4c3423;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", "Times New Roman", serif;
+}
+
+.card-meta {
+    font-size: 11px;
+    color: #8a6b53;
+    margin-bottom: 4px;
+}
+
+.card-note {
+    font-size: 11px;
+    color: #5a4535;
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+/* -------------------------
+   「該当なし」メッセージ
+-------------------------- */
+
+.empty-message {
+    margin-top: 32px;
+    text-align: center;
+    color: #f4e2cf;
+    font-size: 13px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px dashed rgba(240, 214, 190, 0.9);
+    background: rgba(110, 34, 25, 0.7);
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* -------------------------
+   メディアクエリ（スマホ）
+-------------------------- */
+
+@media (max-width: 480px) {
+    header {
+        padding: 12px 12px 10px;
+    }
+    
+    header h1 {
+        font-size: 18px;
+    }
+    
+    main {
+        padding: 12px;
+    }
+    
+    .gallery {
+        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+    
+    .card {
+        border-radius: 12px;
+    }
+}

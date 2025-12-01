@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>ボタン図鑑</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="button-zukan.css">
+</head>
+<body>
+  <header>
+    <h1>ボタン図鑑</h1>
+    <p>タブで色を切り替えて、コレクションを眺めるだけのシンプル図鑑。</p>
+    <div class="tabs">
+      <button class="tab-button active" data-filter="all">すべて</button>
+      <button class="tab-button" data-filter="red">赤</button>
+      <button class="tab-button" data-filter="blue">青</button>
+      <button class="tab-button" data-filter="yellow">黄</button>
+      <button class="tab-button" data-filter="green">緑</button>
+      <button class="tab-button" data-filter="purple">紫</button>
+      <button class="tab-button" data-filter="pink">ピンク</button>
+      <button class="tab-button" data-filter="brown">茶</button>
+      <button class="tab-button" data-filter="black">黒</button>
+      <button class="tab-button" data-filter="white">白</button>
+      <button class="tab-button" data-filter="metal">金属</button>
+      
+    </div>
+  </header>
+
+  <main>
+    <div class="gallery" id="gallery">
+      <!-- ▼▼ ここからボタンカードをコピペで増やしていく ▼▼ -->
+
+      <!-- サンプル：赤ボタン -->
+    <div class="card" data-color="red">
+  <div class="card-image"
+       style="background-image: url('images/薔薇窓.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">薔薇窓の宝石</div>
+    <div class="card-meta">色：赤
+    </div>
+    <div class="card-note">宝石のような煌めきと、アンティークフレームが上品。</div>
+  </div>
+</div>
+
+<div class="card" data-color="blue">
+  <div class="card-image"
+       style="background-image: url('images/蒼滴ドロップ.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">蒼滴ドロップ</div>
+    <div class="card-meta">色：青 </div>
+    <div class="card-note">水の揺らぎのような中心のブルーと、金色のアクセントが特徴的。</div>
+  </div>
+</div>
+<div class="card" data-color="metal">
+  <div class="card-image"
+       style="background-image: url('images/王冠卵.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">王冠卵</div>
+    <div class="card-meta">色：金属 </div>
+    <div class="card-note">非常に存在感があり、王室紋章のような雰囲気。</div>
+  </div>
+</div>
+<div class="card" data-color="brown">
+  <div class="card-image"
+       style="background-image: url('images/闇琥珀リング.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">闇琥珀リング</div>
+    <div class="card-meta">色：茶 </div>
+    <div class="card-note">深い黒に、金茶の渦がかかったような大人の雰囲気。</div>
+  </div>
+</div>
+
+<div class="card" data-color="black">
+  <div class="card-image"
+       style="background-image: url('images/古代金紋ドーム.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">古代金紋ドーム</div>
+    <div class="card-meta">色：黒 </div>
+    <div class="card-note">立体的なパターンがまるで古代の護符のような存在感。</div>
+  </div>
+</div>
+
+<div class="card" data-color="pi">
+  <div class="card-image"
+       style="background-image: url('images/桃花珠.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">桃花珠</div>
+    <div class="card-meta">色：ピンク </div>
+    <div class="card-note">ガラスの丸みがとても可愛い。</div>
+  </div>
+</div>
+
+<div class="card" data-color="green">
+  <div class="card-image"
+       style="background-image: url('images/翠葉ミント.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">翠葉ミント</div>
+    <div class="card-meta">色：緑 </div>
+    <div class="card-note">森の精霊のような優しい雰囲気を感じるボタン。</div>
+  </div>
+</div>
+
+<div class="card" data-color="white">
+  <div class="card-image"
+       style="background-image: url('images/白金フルール.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">白金フルール</div>
+    <div class="card-meta">色：白 </div>
+    <div class="card-note">陶器のような白地に、金色で立体的な花紋が入った上品な雰囲気。</div>
+  </div>
+</div>
+
+<div class="card" data-color="purple">
+  <div class="card-image"
+       style="background-image: url('images/藍紋レース.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">藍紋レース</div>
+    <div class="card-meta">色：紫 </div>
+    <div class="card-note">濃紺のガラスのような中心、王冠のような透かし縁取り。</div>
+  </div>
+</div>
+
+<div class="card" data-color="yellow">
+  <div class="card-image"
+       style="background-image: url('images/金蜜オーブ.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">金蜜オーブ</div>
+    <div class="card-meta">色：黄 </div>
+    <div class="card-note">古代の宝飾のような重厚感。ハチミツ色の中心が可愛い。</div>
+  </div>
+</div>
+
+<div class="card" data-color="red">
+  <div class="card-image"
+       style="background-image: url('images/赤瑪瑙ツインライン.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">赤瑪瑙ツインライン</div>
+    <div class="card-meta">色：赤 </div>
+    <div class="card-note">ビー玉のような光沢感。シンプルながらレトロで美しい。</div>
+  </div>
+</div>
+
+<div class="card" data-color="green">
+  <div class="card-image"
+       style="background-image: url('images/黄金鱗スケール.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">黄金鱗スケール</div>
+    <div class="card-meta">色：緑 </div>
+    <div class="card-note">中心が金色のスケイル（鱗）模様のようで、緑枠との対比が美しい。</div>
+  </div>
+</div>
+
+<div class="card" data-color="purple">
+  <div class="card-image"
+       style="background-image: url('images/紫幻サークル.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">紫幻サークル</div>
+    <div class="card-meta">色：紫 </div>
+    <div class="card-note">アメジストのような深紫と光の輪…幻想的でアート感強め。</div>
+  </div>
+</div>
+
+<div class="card" data-color="brown">
+  <div class="card-image"
+       style="background-image: url('images/大地貝モザイク.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">大地貝モザイク</div>
+    <div class="card-meta">色：茶 </div>
+    <div class="card-note">ステンドグラスや砂丘のような、有機的な曲線が魅力。</div>
+  </div>
+</div>
+
+<div class="card" data-color="blue">
+  <div class="card-image"
+       style="background-image: url('images/海泡花グラス.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">海泡花グラス</div>
+    <div class="card-meta">色：青 </div>
+    <div class="card-note">陶器のような質感に、海の泡が固まったような柔らかい形。</div>
+  </div>
+</div>
+
+<div class="card" data-color="white">
+  <div class="card-image"
+       style="background-image: url('images/金翼フェザー.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">金翼フェザー</div>
+    <div class="card-meta">色：白 </div>
+    <div class="card-note">まるで金の羽が左右に広がるような神秘的なデザイン。</div>
+  </div>
+</div>
+
+<div class="card" data-color="metal">
+  <div class="card-image"
+       style="background-image: url('images/潮騒マーメイドシェル.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">潮騒マーメイドシェル</div>
+    <div class="card-meta">色：金属 </div>
+    <div class="card-note">完全に貝殻シェイプで、アンティークゴールドの質感が美しい。</div>
+  </div>
+</div>
+
+<div class="card" data-color="black">
+  <div class="card-image"
+       style="background-image: url('images/星環リング.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">星環リング</div>
+    <div class="card-meta">色：黒 </div>
+    <div class="card-note">宇宙の軌道みたいでとても神秘的なボタン。</div>
+  </div>
+</div>
+
+<div class="card" data-color="red">
+  <div class="card-image"
+       style="background-image: url('images/紅焰オーブ.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">紅焰オーブ</div>
+    <div class="card-meta">色：赤 </div>
+    <div class="card-note">まるで火の精霊・古代紋章のような強い存在感。</div>
+  </div>
+</div>
+
+<div class="card" data-color="white">
+  <div class="card-image"
+       style="background-image: url('images/真珠冠ミルキー.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">真珠冠ミルキー</div>
+    <div class="card-meta">色：白 </div>
+    <div class="card-note">中心の粒模様と周囲の金縁が、王冠の土台のように見えるエレガントなボタン。</div>
+  </div>
+</div>
+
+<div class="card" data-color="yellow">
+  <div class="card-image"
+       style="background-image: url('images/金花珊瑚ペタル.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">金花珊瑚ペタル</div>
+    <div class="card-meta">色：イエロー </div>
+    <div class="card-note">中心の金の粒が花の中心（しべ）のようで、とても華やか。</div>
+  </div>
+</div>
+
+<div class="card" data-color="pink">
+  <div class="card-image"
+       style="background-image: url('images/淡桃ヌード.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">淡桃ヌード</div>
+    <div class="card-meta">色：ピンク </div>
+    <div class="card-note">控えめで大人っぽく、優しい色気のあるボタン。</div>
+  </div>
+</div>
+
+<div class="card" data-color="purple">
+  <div class="card-image"
+       style="background-image: url('images/夜樹サークル.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">夜樹サークル</div>
+    <div class="card-meta">色：紫 </div>
+    <div class="card-note">夜空の中に一本の木が立っているような、神秘的で印象的なデザイン。
+</div>
+  </div></div>
+
+<div class="card" data-color="black">
+  <div class="card-image"
+       style="background-image: url('images/虹花の宝輪.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">虹花の宝輪</div>
+    <div class="card-meta">色：黒 </div>
+    <div class="card-note">レトロな黒ベースの上に、宝石のようなカラフルなラインストーンが配置されている華やかなボタン。
+</div>
+  </div></div>
+
+<div class="card" data-color="blue">
+  <div class="card-image"
+       style="background-image: url('images/蒼幻星スフィア.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">蒼幻星スフィア</div>
+    <div class="card-meta">色：青 </div>
+    <div class="card-note">夜空の惑星、ブルーキャッツアイのような幻想的な光を持つボタン。
+    </div>
+  </div></div>
+
+<div class="card" data-color="green">
+  <div class="card-image" style="background-image: url('images/若葉スワール.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">若葉スワール</div>
+    <div class="card-meta">色：緑 </div>
+    <div class="card-note">翡翠やマスカットガラスのような滑らかさ。草木や風の流れを感じるデザイン。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="brown">
+  <div class="card-image" style="background-image: url('images/六芒宝印.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">六芒宝印</div>
+    <div class="card-meta">色：茶</div>
+    <div class="card-note">まるで古代の封印、秘宝、クラウンシンボルのような存在感。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="white">
+  <div class="card-image" style="background-image: url('images/四宝円.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">四宝円</div>
+    <div class="card-meta">色：白</div>
+    <div class="card-note">幾何学と円が重なる、まるで「封印」や「神殿の紋章」みたいなボタン。
+
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="metal">
+  <div class="card-image" style="background-image: url('images/古王の唐草紋.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">古王の唐草紋</div>
+    <div class="card-meta">色：金属</div>
+    <div class="card-note">緻密な装飾が中東の紋章・古代王国の硬貨のようでとても格調高い。
+      
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="yellow">
+  <div class="card-image" style="background-image: url('images/蜜花ブーケ.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">蜜花ブーケ</div>
+    <div class="card-meta">色：黄</div>
+    <div class="card-note">陶器のような艶、複数の花がぎゅっと集まっている愛らしいデザイン。
+      
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="red">
+  <div class="card-image" style="background-image: url('images/紅珠サークレット.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">紅珠サークレット</div>
+    <div class="card-meta">色：赤</div>
+    <div class="card-note">深紅の宝石のようで、縁の金装飾もアンティーク感たっぷり。
+      
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="brown">
+  <div class="card-image" style="background-image: url('images/陽輪琥珀.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">陽輪琥珀</div>
+    <div class="card-meta">色：茶</div>
+    <div class="card-note">中心に金のリング、周りが琥珀の太陽みたいに広がる美しいボタン。
+      
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="pink">
+  <div class="card-image" style="background-image: url('images/風華スパイラル.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">風華スパイラル</div>
+    <div class="card-meta">色：ピンク</div>
+    <div class="card-note">くるくると回る風の流れのような軽やかさ。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="green">
+  <div class="card-image" style="background-image: url('images/翠玉ミラージュ.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">翠玉ミラージュ</div>
+    <div class="card-meta">色：緑</div>
+    <div class="card-note">宝石のように輝く鮮やかなグリーンで、とても高貴。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="blue">
+  <div class="card-image" style="background-image: url('images/夜海の宝星.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">夜海の宝星</div>
+    <div class="card-meta">色：青</div>
+    <div class="card-note">月と星、銀河のような神秘的なデザイン。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="purple">
+  <div class="card-image" style="background-image: url('images/赤月桂エンブレム.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">赤月桂エンブレム</div>
+    <div class="card-meta">色：紫</div>
+    <div class="card-note">中央に王冠と月桂樹のような図案、外側は紫のガラス風。
+完全に「王家の封印」そのものの雰囲気。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="white">
+  <div class="card-image" style="background-image: url('images/純白クロス.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">純白クロス</div>
+    <div class="card-meta">色：白</div>
+    <div class="card-note">シンプルで洗練され、聖堂モチーフのような神聖さがあります。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="black">
+  <div class="card-image" style="background-image: url('images/夜会の黒真珠.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">夜会の黒真珠</div>
+    <div class="card-meta">色：黒</div>
+    <div class="card-note">黒と金の高級感に、中央のパールの柔らかさが映えるクラシカルデザイン。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="red">
+  <div class="card-image" style="background-image: url('images/宝金花レガリア.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">宝金花レガリア</div>
+    <div class="card-meta">色：赤</div>
+    <div class="card-note">和風の家紋のようでありつつ、アンティーク欧風の宝飾感もある独自の雰囲気。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="brown">
+  <div class="card-image" style="background-image: url('images/金結の古縁.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">金結の古縁</div>
+    <div class="card-meta">色：茶</div>
+    <div class="card-note">中央に金の“結び”のような紋様。温かみと重厚感がある和アンティーク調。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="pink">
+  <div class="card-image" style="background-image: url('images/夢桜リム.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">夢桜リム</div>
+    <div class="card-meta">色：ピンク</div>
+    <div class="card-note">パステルで柔らかく、ロマンチックで可愛い雰囲気。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="metal">
+  <div class="card-image" style="background-image: url('images/黄金織ドーム.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">黄金織ドーム</div>
+    <div class="card-meta">色：金属</div>
+    <div class="card-note">まるで金属を編んだような複雑な立体テクスチャ。古代文明の秘宝のような存在感。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="green">
+  <div class="card-image" style="background-image: url('images/森影オーブ.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">森影オーブ</div>
+    <div class="card-meta">色：緑</div>
+    <div class="card-note">深い森の宝石、苔の雫、オリーブ石のような自然感と神秘性。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="white">
+  <div class="card-image" style="background-image: url('images/黄金雫エレガンス.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">黄金雫エレガンス</div>
+    <div class="card-meta">色：白</div>
+    <div class="card-note">まるで磨かれた金の宝石。神殿の柱の装飾のような品格があります。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="brown">
+  <div class="card-image" style="background-image: url('images/宵闇ノクターン.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">宵闇ノクターン</div>
+    <div class="card-meta">色：茶</div>
+    <div class="card-note">闇の奥に光が揺らめくような、神秘味たっぷりのボタン。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="black">
+  <div class="card-image" style="background-image: url('images/黒鋳ノワール.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">黒鋳ノワール</div>
+    <div class="card-meta">色：黒</div>
+    <div class="card-note">まさに「古代遺物」。彫られたような質感が唯一無二。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="yellow">
+  <div class="card-image" style="background-image: url('images/陽翼シグネット.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">陽翼シグネット</div>
+    <div class="card-meta">色：黄</div>
+    <div class="card-note">太陽と波、あるいは鳥の翼のような動きが美しいデザイン。
+
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="pink">
+  <div class="card-image" style="background-image: url('images/桜渦モチーフ.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">桜渦モチーフ</div>
+    <div class="card-meta">色：ピンク</div>
+    <div class="card-note">ぐるぐると重なる桜色の輪が可愛く、中心の金がアクセント。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="red">
+  <div class="card-image" style="background-image: url('images/紅梅ペタル.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">紅梅ペタル</div>
+    <div class="card-meta">色：赤</div>
+    <div class="card-note">可憐でアンティーク感もある、プラム色のフラワーボタン。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="blue">
+  <div class="card-image" style="background-image: url('images/紺夜レリクス.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">紺夜レリクス</div>
+    <div class="card-meta">色：青</div>
+    <div class="card-note">抽象的でミステリアス、夜空に灯る古代のランタンみたい。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="green">
+  <div class="card-image" style="background-image: url('images/翠輪ジュエル.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">翠輪ジュエル</div>
+    <div class="card-meta">色：緑</div>
+    <div class="card-note">碧い宝石のようで、まるで翡翠や緑の光の泉みたいな印象。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="black">
+  <div class="card-image" style="background-image: url('images/羅針クロス.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">羅針クロス</div>
+    <div class="card-meta">色：黒</div>
+    <div class="card-note">暗闇に浮かぶ金のクロスが、まるで“星のコンパス”のよう。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="brown">
+  <div class="card-image" style="background-image: url('images/金渦の銀河.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">金渦の銀河</div>
+    <div class="card-meta">色：茶</div>
+    <div class="card-note">金の流線が夜の宇宙を切り裂くような幻想的な渦。
+
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="metal">
+  <div class="card-image" style="background-image: url('images/王冠クラシカル.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">王冠クラシカル</div>
+    <div class="card-meta">色：金属</div>
+    <div class="card-note">古い硬貨、王家の紋章、アンティークボタンの王道。
+      
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="purple">
+  <div class="card-image" style="background-image: url('images/紫陽ピオニー.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">紫陽ピオニー</div>
+    <div class="card-meta">色：紫</div>
+    <div class="card-note">可愛さと荘厳さが同居した、とても華やかなデザイン。
+      
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="yellow">
+  <div class="card-image" style="background-image: url('images/黄月のレース.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">黄月のレース</div>
+    <div class="card-meta">色：黄</div>
+    <div class="card-note">夜の窓から輝く月のような、クラシカルで神秘的なデザイン。
+      
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="blue">
+  <div class="card-image" style="background-image: url('images/紺花風ブルーム.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">紺花風ブルーム</div>
+    <div class="card-meta">色：黄</div>
+    <div class="card-note">シンプルながら風に揺れる花のような柔らかさと気品がある。
+      
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="white">
+  <div class="card-image" style="background-image: url('images/金花描ブロッサム.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">金花描ブロッサム</div>
+    <div class="card-meta">色：白</div>
+    <div class="card-note">品があり、やわらかく、どこかアンティーク着物の家紋のような美しさ。
+      
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="green">
+  <div class="card-image" style="background-image: url('images/森渡ミスト.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">森渡ミスト</div>
+    <div class="card-meta">色：緑</div>
+    <div class="card-note">まるで森の精が通り抜けた跡のような、美しい流動感のあるボタン。
+      
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="metal">
+  <div class="card-image" style="background-image: url('images/金唐花細工.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">金唐花細工</div>
+    <div class="card-meta">色：金属</div>
+    <div class="card-note">まるで古代宮殿の装飾品。重厚で華やかな王家の宝物のよう。
+      
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="white">
+  <div class="card-image" style="background-image: url('images/雪銀花環.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">雪銀花環</div>
+    <div class="card-meta">色：白</div>
+    <div class="card-note">清らかで上品、氷の花や銀月のような澄んだ雰囲気。
+      
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="purple">
+  <div class="card-image" style="background-image: url('images/花紡リリィ.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">花紡リリィ</div>
+    <div class="card-meta">色：紫</div>
+    <div class="card-note">小さく可憐で、妖精の飾りのような軽やかな雰囲気。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="black">
+  <div class="card-image" style="background-image: url('images/宙咲ギャラクシー.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">宙咲ギャラクシー</div>
+    <div class="card-meta">色：黒</div>
+    <div class="card-note">星が渦を描くような配置で、まるで銀河を閉じ込めた宝石。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="yellow">
+  <div class="card-image" style="background-image: url('images/琥珀月冠.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">琥珀月冠</div>
+    <div class="card-meta">色：黄</div>
+    <div class="card-note">王家の紋章のような格調と、琥珀色の深みが印象的。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="brown">
+  <div class="card-image" style="background-image: url('images/朽葉ノット.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">朽葉ノット</div>
+    <div class="card-meta">色：茶</div>
+    <div class="card-note">どこか木工細工のような、静かで温かい雰囲気。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="pink">
+  <div class="card-image" style="background-image: url('images/桃金旋ロープ.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">桃金旋ロープ</div>
+    <div class="card-meta">色：ピンク</div>
+    <div class="card-note">エレガントで、古いヨーロッパ調の宝飾ボタンの雰囲気が強い。
+    </div>
+  </div>
+</div>
+
+<div class="card" data-color="red">
+  <div class="card-image" style="background-image: url('images/焦糖グリッド.webp');">
+  </div>
+  <div class="card-body">
+    <div class="card-name">焦糖グリッド</div>
+    <div class="card-meta">色：赤</div>
+    <div class="card-note">まるでワッフル、レトロタイル、パン焼き模様のようで可愛い系。
+
+    </div>
+  </div>
+</div>
+
+
+
+      <!-- ▲▲ ここまでをコピペして増やす ▲▲ -->
+    </div>
+
+    <div class="empty-message" id="emptyMessage" style="display:none;">
+      この色のボタンは、まだ登録されていません。
+    </div>
+  </main>
+  
+  
+
+  <script>
+    // タブ切り替え処理
+    const tabs = document.querySelectorAll(".tab-button");
+    const cards = document.querySelectorAll(".card");
+    const emptyMessage = document.getElementById("emptyMessage");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        // アクティブ表示切り替え
+        tabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        const filter = tab.getAttribute("data-filter");
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const color = card.getAttribute("data-color");
+          const show = (filter === "all") || (filter === color);
+
+          card.style.display = show ? "flex" : "none";
+          if (show) visibleCount++;
+        });
+
+        // 該当カードがないときのメッセージ
+        emptyMessage.style.display = visibleCount === 0 ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
