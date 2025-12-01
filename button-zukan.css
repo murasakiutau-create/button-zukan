@@ -556,3 +556,32 @@ main {
         gap: 4px 10px;
     }
 }
+/* FAQ セクション */
+.faq {
+  margin: 32px 0 24px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: rgba(30, 6, 5, 0.85);
+  border: 1px solid rgba(249, 226, 199, 0.45);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+  color: #fbe9d5;
+  font-size: 13px;
+}
+
+.faq h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.faq dt {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #ffe6b5;
+}
+
+.faq dd {
+  margin: 3px 0 6px 0;
+}
