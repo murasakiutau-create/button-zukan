@@ -404,3 +404,11 @@ main {
   background: linear-gradient(145deg, #fff7ec, #e8d5bd);
   transform: translateY(1px);
 }
+/* ページネーション全体の箱 */
+.pagination {
+  margin: 22px 0;
+  display: flex;
+  justify-content: center;  /* 中央寄せ */
+  align-items: center;
+  gap: 10px;
+}
