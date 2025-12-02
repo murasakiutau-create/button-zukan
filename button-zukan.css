@@ -645,3 +645,52 @@ main {
 .site-footer a:hover {
     border-bottom-style: solid;
 }
+/* ================================
+   ハンバーガーメニュー（スマホ）
+================================ */
+.menu-btn {
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4d3524;
+  padding: 6px 10px;
+}
+
+.global-menu {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(250, 246, 237, 0.96);
+  padding: 16px;
+  border-bottom: 1px solid rgba(145, 115, 83, 0.25);
+}
+
+.global-menu.open {
+  display: flex;
+}
+
+.global-menu .nav-link {
+  font-size: 14px;
+  color: #4d3524;
+  text-decoration: none;
+}
+
+/* PC では横並び */
+@media (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+  .global-menu {
+    display: flex !important;
+    flex-direction: row;
+    gap: 20px;
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
+  .global-menu .nav-link {
+    font-size: 15px;
+    color: #4d3524;
+  }
+}
