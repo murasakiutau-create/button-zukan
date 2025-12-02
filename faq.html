@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>Q&amp;A｜ボタン図鑑</title>
+  <!-- index.html と同じ CSS をここにもコピペ -->
+   <link rel="stylesheet" href="button-zukan.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-header">
+      <button id="menu-toggle" class="menu-btn">☰</button>
+      <div>
+        <h1>Q&amp;A｜ボタン図鑑についてのよくある質問</h1>
+      </div>
+    </div>
+
+    <nav id="global-menu" class="global-menu">
+      <a href="about.html">About</a>
+      <a href="index.html">Gallery</a>
+      <a href="faq.html">Q&amp;A</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="faq">
+      <h2>ボタン図鑑についてのよくある質問</h2>
+      <dl>
+        <dt>このサイトのボタンは購入できますか？</dt>
+        <dd>
+          現在は販売サイトではなく、アンティークボタン・ヴィンテージボタンを眺めて楽しむためのオンライン図鑑です。
+          ハンドメイドやデザインの参考としてご活用ください。
+        </dd>
+
+        <dt>掲載しているボタンはすべてアンティークですか？</dt>
+        <dd>
+          アンティーク・ヴィンテージ・現行品など、主に「デザインが美しいボタン」を中心に掲載しています。
+          実際の年代や素材は、分かる範囲で説明文に記載していきます。
+        </dd>
+
+        <dt>写真のボタンを自分の作品に使ってもいいですか？</dt>
+        <dd>
+          写真自体の無断転載・二次配布はご遠慮ください。
+          作品づくりの参考や、色味・デザインのイメージソースとしてお楽しみいただければ嬉しいです。
+        </dd>
+      </dl>
+    </section>
+  </main>
+
+  <!-- フッターはコピペ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h2 class="footer-title">ボタン図鑑 内ナビゲーション</h2>
+
+    <nav class="footer-nav">
+      <ul class="footer-nav-main">
+        <li><a href="#gallery">▶ ボタン一覧を見る</a></li>
+        <li><a href="#color-guide">色別・ボタンの特徴（全体）</a></li>
+        <li><a href="#top">ページ先頭へ戻る</a></li>
+      </ul>
+
+      <ul class="footer-nav-colors">
+        <li><a href="#color-guide">赤いボタンの特徴</a></li>
+        <li><a href="#color-guide">青いボタンの特徴</a></li>
+        <li><a href="#color-guide">黄色・琥珀色のボタン</a></li>
+        <li><a href="#color-guide">緑・森モチーフのボタン</a></li>
+        <li><a href="#color-guide">紫・高貴なボタン</a></li>
+        <li><a href="#color-guide">茶色・レトロボタン</a></li>
+        <li><a href="#color-guide">白・パール調のボタン</a></li>
+        <li><a href="#color-guide">黒・クラシカルボタン</a></li>
+        <li><a href="#color-guide">金属ボタン・紋章ボタン</a></li>
+      </ul>
+    </nav>
+
+    <p class="footer-copy">
+      「ボタン図鑑」は、アンティークボタン・ヴィンテージボタンを
+      色別に眺められる個人運営のオンラインコレクションサイトです。
+    </p>
+    <p class="footer-copy small">
+      © 2025 ボタン図鑑 / Murasaki Utau
+    </p>
+  </div>
+</footer>
+  <script>
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      document.getElementById("global-menu").classList.toggle("open");
+    });
+  </script>
+</body>
+</html>
